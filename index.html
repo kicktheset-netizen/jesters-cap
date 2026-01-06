@@ -101,6 +101,12 @@
       font-weight: bold;
     }
 
+    .disabled {
+      border-color: #333 !important;
+      color: #bbb !important;
+      cursor: default;
+    }
+
     footer {
       margin-top: 26px;
       font-size: 0.85em;
@@ -113,7 +119,7 @@
   <div class="wrap">
 
     <!-- LOGO -->
-    <!-- If your logo file name is different, change it here -->
+    <!-- CHANGE THIS if your file is trademark.jpg or trademark.png -->
     <img class="logo" src="trademark" alt="Jester’s Cap Trademark Logo">
 
     <h1>JESTER’S CAP</h1>
@@ -121,10 +127,10 @@
 
     <!-- LINKS -->
     <div class="links">
-      <a href="https://www.instagram.com/jesters.cap/" target="_blank">
+      <a href="https://www.instagram.com/jesters.cap/" target="_blank" rel="noopener">
         Instagram <strong>@jesters.cap</strong>
       </a>
-      <a href="https://jesterscap.carrd.co/" target="_blank">
+      <a href="https://jesterscap.carrd.co/" target="_blank" rel="noopener">
         Carrd Hub
       </a>
     </div>
@@ -137,4 +143,20 @@
         <a href="https://kicktheset-netizen.github.io/ruins-of-rebirth/">Enter</a>
       </div>
 
-      <d
+      <div class="card">
+        <h2>Low Flow Beats</h2>
+        <p>Downtempo · Ambient · Ritual Rhythm · Workshops</p>
+        <a href="https://www.instagram.com/jesters.cap/" target="_blank" rel="noopener">Updates</a>
+      </div>
+
+      <div class="card">
+        <h2>Art / Gallery</h2>
+        <p>Visual works, archives, and project documentation.</p>
+        <a class="disabled" href="#" onclick="return false;">Coming Soon</a>
+      </div>
+    </div>
+
+    <footer>© Arlo Olsen — Jester’s Cap</footer>
+  </div>
+</body>
+</html>
