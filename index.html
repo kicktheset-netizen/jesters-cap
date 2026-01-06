@@ -5,58 +5,143 @@
   <title>Jester’s Cap</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
-    body {
-      margin: 0;
-      background: #0f0f0f;
-      color: #eaeaea;
+    :root{
+      --bg:#0b0b0b;
+      --card:#121212;
+      --line:#333;
+      --text:#eaeaea;
+      --muted:#b9b9b9;
+      --gold:#cfa84a;
+    }
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--text);
       font-family: Georgia, serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      text-align: center;
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:28px 16px;
+      text-align:center;
     }
-    h1 { letter-spacing: 2px; }
-    .card {
-      border: 1px solid #444;
-      padding: 20px;
-      margin: 12px;
-      width: 280px;
+    .wrap{ width:min(980px, 100%); }
+    .logo{
+      width:140px;
+      height:140px;
+      object-fit:contain;
+      border-radius:16px;
+      border:1px solid var(--line);
+      background:#0f0f0f;
+      padding:10px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+      margin: 0 auto 16px;
+      display:block;
     }
-    a {
-      color: #cfa84a;
-      text-decoration: none;
-      font-weight: bold;
+    h1{ margin: 0 0 6px; letter-spacing: 2px; }
+    .tagline{ margin:0 0 18px; color:var(--muted); }
+
+    .links{
+      display:flex;
+      gap:12px;
+      justify-content:center;
+      flex-wrap:wrap;
+      margin: 12px 0 26px;
+    }
+    .pill{
+      display:inline-block;
+      padding:10px 14px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      color:var(--text);
+      text-decoration:none;
+      background:#0f0f0f;
+    }
+    .pill strong{ color:var(--gold); }
+
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap:14px;
+      margin-top: 6px;
+    }
+    .card{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:18px;
+      padding:18px;
+      box-shadow: 0 14px 40px rgba(0,0,0,0.35);
+      text-align:left;
+    }
+    .card h2{ margin:0 0 6px; letter-spacing:1px; font-size: 18px; }
+    .card p{ margin:0 0 14px; color:var(--muted); line-height:1.45; }
+
+    .btn{
+      display:inline-block;
+      padding:10px 14px;
+      border-radius:12px;
+      border:1px solid var(--gold);
+      color:var(--gold);
+      text-decoration:none;
+      font-weight:bold;
+    }
+    .btn.secondary{
+      border-color: var(--line);
+      color: var(--text);
+    }
+
+    footer{
+      margin-top:22px;
+      color:var(--muted);
+      font-size:0.85em;
     }
   </style>
 </head>
 <body>
+  <div class="wrap">
 
-  <h1>JESTER’S CAP</h1>
-  <p>Creative House · Mythic Arts · Sound</p>
+    <!-- LOGO: change filename if yours is different -->
+    <img class="logo" src="trademark" alt="Jester’s Cap trademark logo" />
 
-  <div class="card">
-    <h2>Ruins of Rebirth</h2>
-    <p>Apocryphic Studies · Mythic Narrative</p>
-    <a href="https://kicktheset-netizen.github.io/ruins-of-rebirth/">Enter</a>
+    <h1>JESTER’S CAP</h1>
+    <p class="tagline">Creative House · Mythic Arts · Sound</p>
+
+    <div class="links">
+      <a class="pill" href="https://www.instagram.com/jesters.cap/" target="_blank" rel="noopener">
+        Instagram: <strong>@jesters.cap</strong>
+      </a>
+      <a class="pill" href="https://jesterscap.carrd.co/" target="_blank" rel="noopener">
+        Carrd Hub
+      </a>
+      <!-- Replace with your email or delete this button -->
+      <a class="pill" href="mailto:YOUR_EMAIL_HERE">
+        Email
+      </a>
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <h2>Ruins of Rebirth</h2>
+        <p>Apocryphic Studies · Mythic Narrative · Sonic Relics</p>
+        <a class="btn" href="https://kicktheset-netizen.github.io/ruins-of-rebirth/">Enter Ruins</a>
+        <span style="display:inline-block; width:8px;"></span>
+        <a class="btn secondary" href="#" onclick="return false;">Coming Soon</a>
+      </div>
+
+      <div class="card">
+        <h2>Low Flow Beats</h2>
+        <p>Downtempo · Ambient · Ritual Rhythm · Workshops</p>
+        <a class="btn" href="https://www.instagram.com/jesters.cap/" target="_blank" rel="noopener">Follow / Updates</a>
+      </div>
+
+      <div class="card">
+        <h2>Art / Gallery</h2>
+        <p>Visual works, archives, and project documents.</p>
+        <a class="btn secondary" href="#" onclick="return false;">Coming Soon</a>
+      </div>
+    </div>
+
+    <footer>© Arlo Olsen — Jester’s Cap</footer>
   </div>
-
-  <div class="card">
-    <h2>Low Flow Beats</h2>
-    <p>Downtempo · Ambient · Ritual Rhythm</p>
-    <a href="#">Coming Soon</a>
-  </div>
-
-  <div class="card">
-    <h2>Art / Gallery</h2>
-    <p>Visual works & archives</p>
-    <a href="#">Coming Soon</a>
-  </div>
-
-  <footer style="margin-top:40px; font-size:0.8em;">
-    © Arlo Olsen — Jester’s Cap
-  </footer>
-
 </body>
 </html>
