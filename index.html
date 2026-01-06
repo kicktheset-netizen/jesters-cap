@@ -1,4 +1,3 @@
-<img class="logo" src="FILENAME_HERE" alt="Jester’s Cap trademark logo" />
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,6 +26,8 @@
       text-align:center;
     }
     .wrap{ width:min(980px, 100%); }
+
+    /* Logo block (trademark) */
     .logo{
       width:140px;
       height:140px;
@@ -39,9 +40,11 @@
       margin: 0 auto 16px;
       display:block;
     }
+
     h1{ margin: 0 0 6px; letter-spacing: 2px; }
     .tagline{ margin:0 0 18px; color:var(--muted); }
 
+    /* Link pills */
     .links{
       display:flex;
       gap:12px;
@@ -60,6 +63,7 @@
     }
     .pill strong{ color:var(--gold); }
 
+    /* Cards */
     .grid{
       display:grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -101,12 +105,14 @@
 <body>
   <div class="wrap">
 
-    <!-- LOGO: change filename if needed -->
-    <img class="logo" src="jesters-cap-logo.jpg" alt="Jester’s Cap trademark logo" />
+    <!-- 1) Trademark logo -->
+    <!-- CHANGE the src filename to match your uploaded file exactly -->
+    <img class="logo" src="trademark.jpg" alt="Jester’s Cap trademark logo" />
 
     <h1>JESTER’S CAP</h1>
     <p class="tagline">Creative House · Mythic Arts · Sound</p>
 
+    <!-- 3) Live links -->
     <div class="links">
       <a class="pill" href="https://www.instagram.com/jesters.cap/" target="_blank" rel="noopener">
         Instagram: <strong>@jesters.cap</strong>
@@ -114,12 +120,13 @@
       <a class="pill" href="https://jesterscap.carrd.co/" target="_blank" rel="noopener">
         Carrd Hub
       </a>
-      <!-- Replace with your email or remove this pill -->
+      <!-- Replace with your email or delete this line -->
       <a class="pill" href="mailto:YOUR_EMAIL_HERE">
         Email
       </a>
     </div>
 
+    <!-- 2) Business-card style cards -->
     <div class="grid">
       <div class="card">
         <h2>Ruins of Rebirth</h2>
