@@ -1,155 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Jester’s Cap</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <style>
-    :root{
-      --bg:#0b0b0b;
-      --card:#121212;
-      --line:#333;
-      --text:#eaeaea;
-      --muted:#b9b9b9;
-      --gold:#cfa84a;
-    }
-    body{
-      margin:0;
-      background:var(--bg);
-      color:var(--text);
+    body {
+      margin: 0;
+      background: #0b0b0b;
+      color: #eaeaea;
       font-family: Georgia, serif;
-      min-height:100vh;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      padding:28px 16px;
-      text-align:center;
-    }
-    .wrap{ width:min(980px, 100%); }
-
-    /* Logo block (trademark) */
-    .logo{
-      width:140px;
-      height:140px;
-      object-fit:contain;
-      border-radius:16px;
-      border:1px solid var(--line);
-      background:#0f0f0f;
-      padding:10px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.35);
-      margin: 0 auto 16px;
-      display:block;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 24px;
+      text-align: center;
     }
 
-    h1{ margin: 0 0 6px; letter-spacing: 2px; }
-    .tagline{ margin:0 0 18px; color:var(--muted); }
-
-    /* Link pills */
-    .links{
-      display:flex;
-      gap:12px;
-      justify-content:center;
-      flex-wrap:wrap;
-      margin: 12px 0 26px;
+    .wrap {
+      max-width: 900px;
+      width: 100%;
     }
-    .pill{
-      display:inline-block;
-      padding:10px 14px;
-      border:1px solid var(--line);
-      border-radius:999px;
-      color:var(--text);
-      text-decoration:none;
-      background:#0f0f0f;
-    }
-    .pill strong{ color:var(--gold); }
 
-    /* Cards */
-    .grid{
-      display:grid;
+    img.logo {
+      width: 150px;
+      height: auto;
+      margin: 0 auto 18px;
+      display: block;
+      border-radius: 16px;
+      border: 1px solid #333;
+      padding: 10px;
+      background: #111;
+    }
+
+    h1 {
+      letter-spacing: 2px;
+      margin-bottom: 6px;
+    }
+
+    .tagline {
+      color: #bbb;
+      margin-bottom: 22px;
+    }
+
+    .links {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 28px;
+    }
+
+    .links a {
+      padding: 10px 16px;
+      border: 1px solid #333;
+      border-radius: 999px;
+      text-decoration: none;
+      color: #eaeaea;
+      background: #111;
+    }
+
+    .links strong {
+      color: #cfa84a;
+    }
+
+    .grid {
+      display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap:14px;
-      margin-top: 6px;
-    }
-    .card{
-      background:var(--card);
-      border:1px solid var(--line);
-      border-radius:18px;
-      padding:18px;
-      box-shadow: 0 14px 40px rgba(0,0,0,0.35);
-      text-align:left;
-    }
-    .card h2{ margin:0 0 6px; letter-spacing:1px; font-size: 18px; }
-    .card p{ margin:0 0 14px; color:var(--muted); line-height:1.45; }
-
-    .btn{
-      display:inline-block;
-      padding:10px 14px;
-      border-radius:12px;
-      border:1px solid var(--gold);
-      color:var(--gold);
-      text-decoration:none;
-      font-weight:bold;
-    }
-    .btn.secondary{
-      border-color: var(--line);
-      color: var(--text);
+      gap: 16px;
     }
 
-    footer{
-      margin-top:22px;
-      color:var(--muted);
-      font-size:0.85em;
+    .card {
+      background: #121212;
+      border: 1px solid #333;
+      border-radius: 18px;
+      padding: 18px;
+      text-align: left;
+    }
+
+    .card h2 {
+      margin-top: 0;
+      letter-spacing: 1px;
+    }
+
+    .card p {
+      color: #bbb;
+      line-height: 1.5;
+    }
+
+    .card a {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 14px;
+      border-radius: 12px;
+      border: 1px solid #cfa84a;
+      color: #cfa84a;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer {
+      margin-top: 26px;
+      font-size: 0.85em;
+      color: #888;
     }
   </style>
 </head>
+
 <body>
   <div class="wrap">
 
-    <!-- 1) Trademark logo -->
-    <!-- CHANGE the src filename to match your uploaded file exactly -->
-    <img class="logo" src="trademark.jpg" alt="Jester’s Cap trademark logo" />
+    <!-- LOGO -->
+    <!-- If your logo file name is different, change it here -->
+    <img class="logo" src="trademark" alt="Jester’s Cap Trademark Logo">
 
     <h1>JESTER’S CAP</h1>
-    <p class="tagline">Creative House · Mythic Arts · Sound</p>
+    <div class="tagline">Creative House · Mythic Arts · Sound</div>
 
-    <!-- 3) Live links -->
+    <!-- LINKS -->
     <div class="links">
-      <a class="pill" href="https://www.instagram.com/jesters.cap/" target="_blank" rel="noopener">
-        Instagram: <strong>@jesters.cap</strong>
+      <a href="https://www.instagram.com/jesters.cap/" target="_blank">
+        Instagram <strong>@jesters.cap</strong>
       </a>
-      <a class="pill" href="https://jesterscap.carrd.co/" target="_blank" rel="noopener">
+      <a href="https://jesterscap.carrd.co/" target="_blank">
         Carrd Hub
-      </a>
-      <!-- Replace with your email or delete this line -->
-      <a class="pill" href="mailto:YOUR_EMAIL_HERE">
-        Email
       </a>
     </div>
 
-    <!-- 2) Business-card style cards -->
+    <!-- PROJECT CARDS -->
     <div class="grid">
       <div class="card">
         <h2>Ruins of Rebirth</h2>
         <p>Apocryphic Studies · Mythic Narrative · Sonic Relics</p>
-        <a class="btn" href="https://kicktheset-netizen.github.io/ruins-of-rebirth/">Enter Ruins</a>
-        <span style="display:inline-block; width:8px;"></span>
-        <a class="btn secondary" href="#" onclick="return false;">Coming Soon</a>
+        <a href="https://kicktheset-netizen.github.io/ruins-of-rebirth/">Enter</a>
       </div>
 
-      <div class="card">
-        <h2>Low Flow Beats</h2>
-        <p>Downtempo · Ambient · Ritual Rhythm · Workshops</p>
-        <a class="btn" href="https://www.instagram.com/jesters.cap/" target="_blank" rel="noopener">Follow / Updates</a>
-      </div>
-
-      <div class="card">
-        <h2>Art / Gallery</h2>
-        <p>Visual works, archives, and project documents.</p>
-        <a class="btn secondary" href="#" onclick="return false;">Coming Soon</a>
-      </div>
-    </div>
-
-    <footer>© Arlo Olsen — Jester’s Cap</footer>
-  </div>
-</body>
-</html>
+      <d
